@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Gamified To-Do</string>
+    <string name="start">Start</string>
+    <string name="start_text">Name your Character</string>
 </resources>
