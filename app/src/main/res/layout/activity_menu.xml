@@ -13,7 +13,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/quit_menu"
-        android:id="@+id/button"
+        android:id="@+id/id_quit_button"
         android:layout_marginBottom="145dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -22,32 +22,32 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/options_menu"
-        android:id="@+id/button2"
-        android:layout_above="@+id/button"
+        android:id="@+id/id_options_button"
+        android:layout_above="@+id/id_quit_button"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/achievements_menu"
-        android:id="@+id/button3"
-        android:layout_above="@+id/button2"
+        android:id="@+id/id_achievements_button"
+        android:layout_above="@+id/id_options_button"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/character_menu"
-        android:id="@+id/button4"
-        android:layout_above="@+id/button3"
+        android:id="@+id/id_character_button"
+        android:layout_above="@+id/id_achievements_button"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/quests_menu"
-        android:id="@+id/button5"
-        android:layout_above="@+id/button4"
+        android:id="@+id/id_quests_button"
+        android:layout_above="@+id/id_character_button"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:text=""
         android:id="@+id/menu_name"
-        android:layout_above="@+id/button5"
+        android:layout_above="@+id/id_quests_button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp" />
 </RelativeLayout>

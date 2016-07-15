@@ -13,6 +13,11 @@ public class CreateChar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if (getIntent().getBooleanExtra("EXIT", false)) {
+            finish();
+        }//Für Quit
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_char);
 
