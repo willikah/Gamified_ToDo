@@ -20,7 +20,6 @@
         <activity android:name=".Menu">
             <intent-filter>
                 <action android:name="com.apps.kahlmann.gamifiedto_do.Menu" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

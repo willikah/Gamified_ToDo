@@ -2,4 +2,9 @@
     <string name="app_name">Gamified To-Do</string>
     <string name="start">Start</string>
     <string name="start_text">Name your Character</string>
+    <string name="achievements_menu">Achievements</string>
+    <string name="options_menu">Options</string>
+    <string name="quit_menu">Quit</string>
+    <string name="character_menu">Character</string>
+    <string name="quests_menu">Quests</string>
 </resources>
