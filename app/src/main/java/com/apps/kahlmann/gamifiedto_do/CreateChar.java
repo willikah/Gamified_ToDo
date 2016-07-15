@@ -15,13 +15,11 @@ public class CreateChar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        if (getIntent().getBooleanExtra("EXIT", false)) {
-            finish();
-        }//Für Quit
+
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_char);
 
+        setContentView(R.layout.activity_create_char);
         start_button();
         hit_enter();
 
@@ -39,9 +37,10 @@ public class CreateChar extends AppCompatActivity {
                 EditText name_field = (EditText)findViewById(R.id.id_Name_field);
 
                 //Starte Menü
-                Intent menu_ac = new Intent("com.apps.kahlmann.gamifiedto_do.Menu");
-                menu_ac.putExtra("character_name",name_field.getText().toString()); // Übergib Textfeld
-                startActivity(menu_ac);
+                Intent intent = new Intent("com.apps.kahlmann.gamifiedto_do.Menu");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("character_name",name_field.getText().toString()); // Übergib Textfeld
+                startActivity(intent);
             }
         });
 
@@ -64,9 +63,10 @@ public class CreateChar extends AppCompatActivity {
                             case KeyEvent.KEYCODE_ENTER:
 
                                 //Starte Menü
-                                Intent menu_ac = new Intent("com.apps.kahlmann.gamifiedto_do.Menu");
-                                menu_ac.putExtra("character_name",name_field.getText().toString()); // Übergib Textfeld
-                                startActivity(menu_ac);
+                                Intent intent = new Intent("com.apps.kahlmann.gamifiedto_do.Menu");
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                intent.putExtra("character_name",name_field.getText().toString()); // Übergib Textfeld
+                                startActivity(intent);
 
                                 return true;
                             default:

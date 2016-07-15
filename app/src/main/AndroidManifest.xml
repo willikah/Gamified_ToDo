@@ -9,17 +9,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".CreateChar">
+        <activity android:name=".Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.apps.kahlmann.gamifiedto_do.Menu"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".Menu">
+        <activity android:name=".CreateChar">
             <intent-filter>
-                <action android:name="com.apps.kahlmann.gamifiedto_do.Menu" />
+                <action android:name="com.apps.kahlmann.gamifiedto_do.Create_Char" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
