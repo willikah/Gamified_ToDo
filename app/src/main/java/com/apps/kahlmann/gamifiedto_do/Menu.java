@@ -8,34 +8,33 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Menu extends AppCompatActivity {
+
+    protected Char character;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        if (getIntent().getBooleanExtra("EXIT", false)) {
-            finish();
-        }//Für Quit
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        button_startAc(R.id.id_quests_button,"com.apps.kahlmann.gamifiedto_do.Create_Char" );
+        character=(Char)getApplication();
 
-
-        Intent intent = getIntent();
-
-        // Namen anzeigen
-
-        if(intent.getStringExtra("character_name")!=null) {
+        // Wenn schon gesetzt Namen anzeigen
+        if(character.getName().length()!=0){
             TextView menu_name = (TextView) findViewById(R.id.menu_name);
-            menu_name.setText("Welcome " + intent.getStringExtra("character_name"));
+            menu_name.setText(character.getName());
         }
 
+        //QuestButton
+        button_startAc(R.id.id_quests_button,"com.apps.kahlmann.gamifiedto_do.Create_Char" );
 
-        //button_startAc();
+        //Quit Button
         quit_button();
 
     }
 
+    //springe zu Activity mit Button
     public void button_startAc(int id, final String Ac) {
 
         Button button = (Button)findViewById(id);
@@ -59,12 +58,6 @@ public class Menu extends AppCompatActivity {
             quit_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    /*Intent intent = new Intent(getApplicationContext(), CreateChar.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.putExtra("EXIT", true);
-                    startActivity(intent);*/
-
                     finish();
                     System.exit(0);
                 }
